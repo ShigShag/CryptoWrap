@@ -1,7 +1,0 @@
-* OCB
-* Cipher Update refactoren 
-* Authentication iv und key size auf unsigned int umstellen
-* WEXTRA checken
-* https://www.openssl.org/docs/man3.0/man3/EVP_CipherUpdate.html --> "cts" (OSSL_CIPHER_PARAM_CTS) <integer> Gets 1 if the cipher algorithm cipher uses ciphertext stealing, otherwise it gets 0. This is currently used to indicate that the cipher is a one shot that only allows a single call to EVP_CipherUpdate(). Use (EVP_CIPHER_get_flags(cipher) & EVP_CIPH_FLAG_CTS) to retrieve the cached value.
-* Tests für File Cipher
-* Cleanup mal was besser machen
