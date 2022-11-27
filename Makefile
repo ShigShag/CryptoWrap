@@ -32,12 +32,12 @@ static: $(STATIC)
 shared: $(SHARED) 
 
 
-$(STATIC): $(OBJ_DIR_LOCAL) $(SOURCE_DIRECTORIES)
+$(STATIC): clean $(OBJ_DIR_LOCAL) $(SOURCE_DIRECTORIES)
 	ar -crs $@ $(OBJ_FILES)
 
 # Add fPIC flag for shared library
 $(SHARED): CFLAGS += -fPIC
-$(SHARED): $(OBJ_DIR_LOCAL) $(SOURCE_DIRECTORIES)
+$(SHARED): clean $(OBJ_DIR_LOCAL) $(SOURCE_DIRECTORIES)
 	$(CC) -o $@ -shared -fPIC $(OBJ_FILES)
 
 export CFLAGS OBJ_DIR_RELATIVE CC
